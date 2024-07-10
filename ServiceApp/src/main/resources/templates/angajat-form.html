@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Angajat Form</title>
+</head>
+<body>
+<h2>Angajat Form</h2>
+<form th:action="@{/saveAngajat}"th:object="${angajat}"method="post">
+  <label for="nume">Nume:</label><br>
+  <input type="text" id="nume" name="nume" th:field="*{nume}" required><br><br>
+
+  <label for="prenume">Prenume:</label><br>
+  <input type="text" id="prenume" name="prenume"th:field="*{prenume}" required><br><br>
+
+  <label for="post">Post:</label><br>
+  <input type="text" id="post" name="post" th:field="*{post}"required><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
